@@ -1,38 +1,52 @@
-const menuToggle = document.getElementById('menuToggle');
-const nav = document.getElementById('nav');
+const navToggle = document.getElementById('navToggle');
+const navMenu = document.getElementById('navMenu');
+const contactForm = document.getElementById('contactForm');
 
-if (menuToggle && nav) {
-  menuToggle.addEventListener('click', () => {
-    nav.classList.toggle('is-open');
+if (navToggle && navMenu) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = navMenu.classList.toggle('is-open');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
   });
 
-  nav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => nav.classList.remove('is-open'));
+  navMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
   });
 }
 
-const contactForm = document.querySelector('.contact-form');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.14 });
+
+Array.from(document.querySelectorAll('.reveal')).forEach((element) => {
+  observer.observe(element);
+});
 
 if (contactForm) {
   contactForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const existingNote = contactForm.querySelector('.success-note');
-    if (existingNote) existingNote.remove();
+    const formData = new FormData(contactForm);
+    const name = encodeURIComponent(formData.get('name') || '');
+    const email = encodeURIComponent(formData.get('email') || '');
+    const phone = encodeURIComponent(formData.get('phone') || '');
+    const message = encodeURIComponent(formData.get('message') || '');
 
-    const success = document.createElement('p');
-    success.className = 'success-note';
-    success.textContent = 'Demo-sivulla viestiä ei lähetetä minnekään, mutta tähän voidaan kytkeä myöhemmin oikea lomaketoiminto.';
-    success.style.margin = '0';
-    success.style.padding = '12px 14px';
-    success.style.borderRadius = '14px';
-    success.style.background = 'rgba(47, 226, 122, 0.12)';
-    success.style.border = '1px solid rgba(47, 226, 122, 0.24)';
-    success.style.color = '#dbffea';
-    success.style.fontSize = '14px';
-    success.style.lineHeight = '1.6';
+    const subject = encodeURIComponent('Uusi demo-/yhteydenottopyyntö verkkosivulta');
+    const body = encodeURIComponent(
+      `Nimi: ${decodeURIComponent(name)}\n` +
+      `Sähköposti: ${decodeURIComponent(email)}\n` +
+      `Puhelin: ${decodeURIComponent(phone)}\n\n` +
+      `Viesti:\n${decodeURIComponent(message)}`
+    );
 
-    contactForm.appendChild(success);
-    contactForm.reset();
+    window.location.href = `mailto:jerry.chatpalvelu@gmail.com?subject=${subject}&body=${body}`;
   });
 }

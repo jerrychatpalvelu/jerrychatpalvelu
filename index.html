@@ -3,394 +3,466 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jerry Chatpalvelu | Räätälöidyt asiakaspalveluchatit yrityksille</title>
-  <meta name="description" content="Jerry Chatpalvelu rakentaa yrityksellesi verkkosivuille räätälöidyn asiakaspalveluchatin, joka vastaa yleisimpiin kysymyksiin, ohjaa oikeaan palveluun ja kerää yhteydenotot talteen." />
-  <meta name="theme-color" content="#0c1530" />
+  <title>Jerry Chatpalvelu | Räätälöidyt asiakaschatit yrityksille</title>
+  <meta name="description" content="Jerry Chatpalvelu rakentaa yrityksille räätälöityjä verkkosivuchatteja, jotka ohjaavat asiakkaat oikeaan paikkaan, vähentävät turhia yhteydenottoja ja keräävät liidit talteen." />
+  <meta name="theme-color" content="#081327" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=+Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="site-shell">
     <header class="topbar">
-      <div class="container topbar__inner">
-        <a class="brand" href="#alku" aria-label="Jerry Chatpalvelu etusivu">
+      <div class="container nav-wrap">
+        <a class="brand" href="#hero" aria-label="Jerry Chatpalvelu etusivulle">
           <img src="logo.png" alt="Jerry Chatpalvelu logo" class="brand__logo" />
           <div class="brand__text">
             <strong>Jerry Chatpalvelu</strong>
-            <span>Räätälöidyt verkkosivuchatit</span>
+            <span>Räätälöidyt asiakaschatit yrityksille</span>
           </div>
         </a>
 
-        <nav class="nav" id="nav">
-          <a href="#hyodyt">Hyödyt</a>
-          <a href="#palvelu">Palvelu</a>
-          <a href="#paketit">Paketit</a>
-          <a href="#prosessi">Prosessi</a>
-          <a href="#ukk">UKK</a>
-        </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Avaa valikko" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
 
-        <div class="topbar__actions">
-          <a class="btn btn--ghost" href="#paketit">Katso paketit</a>
-          <a class="btn btn--primary" href="#yhteys">Pyydä demo</a>
-          <button class="menu-toggle" id="menuToggle" aria-label="Avaa valikko">
-            <span></span><span></span><span></span>
-          </button>
-        </div>
+        <nav class="nav" id="navMenu">
+          <a href="#palvelu">Palvelu</a>
+          <a href="#hyodyt">Hyödyt</a>
+          <a href="#prosessi">Prosessi</a>
+          <a href="#paketit">Paketit</a>
+          <a href="#faq">UKK</a>
+          <a href="#yhteys" class="nav__cta">Pyydä demo</a>
+        </nav>
       </div>
     </header>
 
     <main>
-      <section class="hero" id="alku">
+      <section class="hero" id="hero">
         <div class="container hero__grid">
-          <div class="hero__content">
-            <div class="badge">Premium-tasoinen verkkosivuchat paikallisille yrityksille</div>
-            <h1>Asiakaspalveluchat, joka näyttää hyvältä, vastaa heti ja kerää yhteydenotot talteen.</h1>
+          <div class="hero__content reveal">
+            <div class="hero__badge">
+              <span class="hero__dot"></span>
+              Asiakasohjaus, joka tekee verkkosivuista tehokkaammat
+            </div>
+
+            <h1>Verkkosivuchat, joka näyttää premiumilta ja ohjaa asiakkaan heti oikeaan paikkaan.</h1>
+
             <p class="hero__lead">
-              Jerry Chatpalvelu rakentaa yrityksellesi verkkosivuille räätälöidyn chatin,
-              joka ohjaa asiakkaan nopeasti oikeaan palveluun, vähentää turhia puheluita
-              ja tekee sivustasi ammattimaisemman.
+              Rakennan yrityksille räätälöityjä asiakaspalveluchatteja, jotka vastaavat yleisimpiin kysymyksiin,
+              ohjaavat yhteydenottoihin ja tekevät koko sivustosta vakuuttavamman — ilman että koko verkkosivua tarvitsee uusia.
             </p>
 
-            <div class="hero__highlights">
-              <div class="hero__pill">Räätälöity yrityksesi ilmeeseen</div>
-              <div class="hero__pill">Klikattava, varma ja hallittu flow</div>
-              <div class="hero__pill">Liidit talteen ilman säätöä</div>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#yhteys">Pyydä oma demo</a>
+              <a class="btn btn--secondary" href="#paketit">Katso paketit</a>
             </div>
 
-            <div class="hero__cta">
-              <a class="btn btn--primary btn--large" href="#yhteys">Pyydä oma demo</a>
-              <a class="btn btn--secondary btn--large" href="#palvelu">Näe miten toimii</a>
-            </div>
-
-            <div class="hero__stats">
-              <div class="stat-card">
-                <strong>Nopeat vastaukset</strong>
-                <span>Yleisimmät kysymykset näkyviin heti sivulla</span>
+            <div class="hero__meta">
+              <div class="hero__meta-item">
+                <strong>Räätälöity yritykselle</strong>
+                <span>Ulkoasu, sisältö ja flow sovitetaan teidän sivuun</span>
               </div>
-              <div class="stat-card">
-                <strong>Enemmän yhteydenottoja</strong>
-                <span>Asiakas ohjataan tarjouspyyntöön, soittoon tai WhatsAppiin</span>
+              <div class="hero__meta-item">
+                <strong>Kevyt toteutus</strong>
+                <span>Ei raskasta verkkosivuprojektia tai monimutkaista järjestelmää</span>
               </div>
-              <div class="stat-card">
-                <strong>Valmis käyttöönottoon</strong>
-                <span>Sinulle tehdään valmiiksi, ei teknistä säätöä</span>
+              <div class="hero__meta-item">
+                <strong>Suora hyöty</strong>
+                <span>Nopeampi ohjaus, vähemmän hukattuja kävijöitä ja enemmän liidejä</span>
               </div>
             </div>
           </div>
 
-          <div class="hero__visual">
-            <div class="showcase-card glass-card">
-              <div class="showcase-card__top">
+          <div class="hero__visual reveal">
+            <div class="visual-glow visual-glow--blue"></div>
+            <div class="visual-glow visual-glow--orange"></div>
+
+            <div class="visual-card visual-card--main">
+              <div class="visual-card__top">
                 <div class="window-dots"><span></span><span></span><span></span></div>
-                <span class="window-label">Esimerkkichat yrityksesi sivulla</span>
+                <span>Räätälöity asiakaschat yrityksen sivulla</span>
               </div>
 
-              <div class="chat-demo">
-                <div class="chat-demo__header">
+              <div class="chat-preview">
+                <div class="chat-preview__header">
                   <div>
-                    <p>Asiakaspalvelu</p>
-                    <strong>Yrityksesi nimi</strong>
+                    <strong>Asiakaspalvelu</strong>
+                    <small>Vastaa heti yleisimpiin kysymyksiin</small>
                   </div>
-                  <span class="status-dot">Avoinna nyt</span>
+                  <div class="status-pill">Live</div>
                 </div>
 
-                <div class="chat-demo__messages">
-                  <div class="message message--bot">Hei! Miten voimme auttaa?</div>
-                  <div class="option-grid">
-                    <button>Varaa aika</button>
-                    <button>Hinnat</button>
-                    <button>Palvelut</button>
-                    <button>Yhteystiedot</button>
-                  </div>
-                  <div class="message message--bot">Tässä yleisimmät hinnat ja vaihtoehdot. Voit myös jättää yhteydenottopyynnön suoraan tähän.</div>
-                  <div class="message message--user">Pyydä tarjous</div>
-                  <div class="lead-card">
-                    <strong>Liidi talteen</strong>
-                    <span>Nimi + puhelin / sähköposti + viesti</span>
-                  </div>
+                <div class="bubble bubble--bot">Hei 👋 Miten voimme auttaa?</div>
+
+                <div class="quick-actions">
+                  <span>📅 Varaa aika</span>
+                  <span>💶 Hinnat</span>
+                  <span>🔧 Palvelut</span>
+                  <span>📍 Yhteystiedot</span>
+                </div>
+
+                <div class="bubble bubble--bot">
+                  Asiakas saa vastauksen sekunneissa ilman että hänen tarvitsee etsiä tietoa eri sivuilta.
+                </div>
+
+                <div class="bubble bubble--user">Haluaisin pyytää tarjouksen</div>
+
+                <div class="bubble bubble--bot">
+                  Jätä yhteystietosi, niin yritys voi palata asiaan nopeasti.
                 </div>
               </div>
             </div>
 
-            <div class="floating-note floating-note--top">
-              <strong>Ei arvaile</strong>
-              <span>Hallittu klikkiflow ja turvallinen fallback</span>
+            <div class="floating-stat stat--one">
+              <strong>Premium-ensivaikutelma</strong>
+              <span>Moderni toteutus, joka näyttää aidosti osalta sivustoa.</span>
             </div>
 
-            <div class="floating-note floating-note--bottom">
-              <strong>Myyvä lopputulos</strong>
-              <span>Tyylikäs chat, joka näyttää oikeasti premiumilta</span>
+            <div class="floating-stat stat--two">
+              <strong>Toimiva asiakasohjaus</strong>
+              <span>Asiakas ohjataan aina eteenpäin ilman sekoilua tai dead endeja.</span>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="trust-strip">
-        <div class="container trust-strip__inner">
-          <span>Sopii erityisen hyvin:</span>
-          <strong>autokorjaamot</strong>
-          <strong>kauneus- & hyvinvointialat</strong>
-          <strong>paikalliset palveluyritykset</strong>
-          <strong>yritykset, joille tulee paljon samoja kysymyksiä</strong>
+      <section class="section section--tight logos-strip">
+        <div class="container logos-strip__inner reveal">
+          <p>Suunniteltu erityisesti pk-yrityksille, jotka haluavat enemmän hyötyä nykyisistä verkkosivuistaan.</p>
+          <div class="logos-strip__chips">
+            <span>Autokorjaamot</span>
+            <span>Kauneus & wellness</span>
+            <span>Paikalliset palveluyritykset</span>
+            <span>Liideihin nojaavat yritykset</span>
+          </div>
         </div>
       </section>
 
-      <section class="section" id="hyodyt">
+      <section class="section section--stats">
+        <div class="container stats-grid reveal">
+          <article class="stat-card">
+            <strong>Ensivaikutelma</strong>
+            <p>Sivu näyttää heti siltä, että palvelu on oikea, huolellisesti rakennettu ja turvallinen ostaa.</p>
+          </article>
+          <article class="stat-card">
+            <strong>Ohjaus</strong>
+            <p>Asiakas ei jää yksin vaan saa näkyvän reitin palveluihin, yhteydenottoon ja olennaisiin tietoihin.</p>
+          </article>
+          <article class="stat-card">
+            <strong>Konversio</strong>
+            <p>Chat voi kerätä yhteydenottopyynnöt, ohjata soittoon tai tukea ajanvarausta selkeästi.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="palvelu">
         <div class="container">
-          <div class="section-heading">
-            <span class="section-heading__eyebrow">Miksi tämä toimii</span>
-            <h2>Mitä asiakkaasi oikeasti haluaa nähdä sivuillasi</h2>
-            <p>Selkeys, nopeus ja helppo tapa ottaa yhteyttä. Ei sekavaa bottia, vaan hallittu asiakaspolku joka vie eteenpäin.</p>
+          <div class="section-heading reveal">
+            <span class="section-kicker">Palvelu</span>
+            <h2>En myy pelkkää chattia. Rakennan asiakasohjauksen, joka tekee verkkosivuista tehokkaammat.</h2>
+            <p>
+              Useimmat verkkosivut jättävät kävijän yksin etsimään tietoa. Jerry Chatpalvelu lisää sivulle selkeän,
+              tyylikkään ja toimivan ohjauksen, joka auttaa asiakasta etenemään heti oikeaan suuntaan.
+            </p>
           </div>
 
-          <div class="benefit-grid">
-            <article class="benefit-card glass-card">
-              <div class="benefit-card__icon">⚡</div>
-              <h3>Välitön vastaus</h3>
-              <p>Asiakas saa heti tärkeimmät tiedot: hinnat, palvelut, aukioloajat, sijainnin ja yhteydenoton.</p>
+          <div class="service-grid">
+            <article class="service-card reveal">
+              <div class="service-card__icon">01</div>
+              <h3>Räätälöity ulkoasu</h3>
+              <p>Chat sovitetaan yrityksen väreihin, tunnelmaan ja verkkosivun ilmeeseen niin, että se näyttää aidosti osalta sivustoa.</p>
             </article>
 
-            <article class="benefit-card glass-card">
-              <div class="benefit-card__icon">🎯</div>
-              <h3>Ohjaus oikeaan paikkaan</h3>
-              <p>Chat ei jää jumiin, vaan ohjaa asiakkaan tarjouspyyntöön, ajanvaraukseen, soittoon tai WhatsAppiin.</p>
+            <article class="service-card reveal">
+              <div class="service-card__icon">02</div>
+              <h3>Ohjattu keskusteluflow</h3>
+              <p>Klikattavat valinnat, järkevä eteneminen ja turvallinen fallback varmistavat, ettei botti jää jumiin tai ala arvailla.</p>
             </article>
 
-            <article class="benefit-card glass-card">
-              <div class="benefit-card__icon">💎</div>
-              <h3>Premium-ilme</h3>
-              <p>Ulkoasu rakennetaan sivusi brändiin sopivaksi, jotta chat näyttää aidosti osalta yrityksesi verkkosivua.</p>
-            </article>
-
-            <article class="benefit-card glass-card">
-              <div class="benefit-card__icon">📈</div>
-              <h3>Enemmän liidejä</h3>
-              <p>Kun kysymykseen saa vastauksen heti, kynnys jättää yhteydenotto madaltuu ja kävijä muuttuu helpommin asiakkaaksi.</p>
+            <article class="service-card reveal">
+              <div class="service-card__icon">03</div>
+              <h3>Liidit talteen</h3>
+              <p>Chat voi ohjata soittoon, WhatsAppiin, yhteydenottopyyntöön tai ajanvaraukseen — juuri siihen mikä yritykselle toimii parhaiten.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section section--alt" id="palvelu">
-        <div class="container feature-layout">
-          <div class="feature-copy">
-            <span class="section-heading__eyebrow">Mitä saat</span>
-            <h2>Valmis chat-palvelu, ei pelkkä koodinpätkä</h2>
+      <section class="section section--dark" id="hyodyt">
+        <div class="container benefits-layout">
+          <div class="benefits-copy reveal">
+            <span class="section-kicker section-kicker--light">Miksi tämä toimii</span>
+            <h2>Ensivaikutelma, nopeus ja ohjaus samassa paketissa.</h2>
             <p>
-              Saat käyttöösi kokonaisuuden, joka suunnitellaan yrityksesi tarpeiden mukaan.
-              Tavoite ei ole näyttää “tekoälyltä”, vaan auttaa asiakasta nopeasti ja näyttää ammattimaiselta.
+              Kun asiakas saapuu sivulle, hän ei halua arvailla mistä tieto löytyy. Hyvä chat toimii näkyvänä kiintopisteenä,
+              joka vastaa heti, ohjaa eteenpäin ja tekee koko yrityksestä ammattimaisemman oloisen.
             </p>
+          </div>
 
-            <ul class="feature-list">
-              <li>Yrityksesi väreihin ja tyyliin sovitettu chat-widget</li>
-              <li>Klikattavat päävalinnat ja palvelukohtaiset flow’t</li>
-              <li>Yleisimpien kysymysten vastaukset valmiiksi rakennettuna</li>
-              <li>CTA:t: soita, WhatsApp, kartta, tarjouspyyntö, yhteydenotto</li>
-              <li>Liidilomake chatin sisällä</li>
-              <li>Turvallinen fallback, jotta botti ei jää “tyhmäksi”</li>
+          <div class="benefits-list reveal">
+            <div class="benefit-item">
+              <strong>Asiakas löytää vastauksen nopeammin</strong>
+              <p>Yleisimmät kysymykset, palvelut, hinnat ja yhteystiedot löytyvät sekunneissa.</p>
+            </div>
+            <div class="benefit-item">
+              <strong>Yritys näyttää nykyaikaisemmalta</strong>
+              <p>Hyvin tehty chat kertoo heti, että sivustoa on oikeasti mietitty asiakkaan näkökulmasta.</p>
+            </div>
+            <div class="benefit-item">
+              <strong>Vähemmän hukattuja kävijöitä</strong>
+              <p>Kun kävijä saa ohjauksen heti, todennäköisyys yhteydenottoon kasvaa selvästi.</p>
+            </div>
+            <div class="benefit-item">
+              <strong>Kevyt käyttöönotto</strong>
+              <p>Ratkaisu lisätään nykyiselle sivulle ilman, että koko verkkosivua tarvitsee rakentaa uudelleen.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--showcase">
+        <div class="container showcase-grid">
+          <div class="showcase-card reveal">
+            <span class="section-kicker">Mitä asiakas haluaa nähdä</span>
+            <h2>Virallinen ilme. Selkeä hyöty. Konkreettinen demo.</h2>
+            <p>
+              Paras ensivaikutelma syntyy siitä, että yritys ymmärtää nopeasti mitä saa, miltä se näyttää käytännössä ja miksi se hyödyttää juuri heidän liiketoimintaansa.
+            </p>
+            <ul class="showcase-list">
+              <li>Uskottava, moderni ja premium-tasoinen toteutus</li>
+              <li>Selkeä paketoitu palvelu ja avoin hinnoittelu</li>
+              <li>Räätälöity demo ennen lopullista toteutusta</li>
             </ul>
           </div>
 
-          <div class="feature-panel glass-card">
-            <div class="feature-panel__header">
-              <strong>Palvelun runko</strong>
-              <span>Se mikä tekee tästä helposti ostettavan</span>
+          <div class="showcase-panel reveal">
+            <div class="showcase-panel__top">
+              <span class="pill">Demo ennen toteutusta</span>
+              <span class="pill pill--soft">Ei arvailua</span>
             </div>
-
-            <div class="stack-list">
-              <div class="stack-item">
-                <strong>1. Visuaalinen suunnittelu</strong>
-                <p>Rakennetaan chatin ilme sopimaan yrityksesi nykyisiin kotisivuihin.</p>
-              </div>
-              <div class="stack-item">
-                <strong>2. Sisällön jäsentäminen</strong>
-                <p>Poimitaan kaikki asiakkaalle olennaiset asiat ja muutetaan ne selkeäksi flow’ksi.</p>
-              </div>
-              <div class="stack-item">
-                <strong>3. Myyvä rakenne</strong>
-                <p>Asiakas ohjataan aina hyödylliseen seuraavaan stepin, ei umpikujaan.</p>
-              </div>
-              <div class="stack-item">
-                <strong>4. Käyttöönotto</strong>
-                <p>Toimitetaan valmiina ja autetaan tarvittaessa asennuksessa.</p>
-              </div>
+            <div class="showcase-quote">
+              <strong>“Tämä näyttää jo siltä, että sen voisi ottaa käyttöön.”</strong>
+              <p>
+                Se on tavoite. En näytä luonnosta, vaan valmiin oloista ratkaisua, jotta yritys näkee heti mihin on sanomassa kyllä.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section" id="paketit">
+      <section class="section" id="prosessi">
         <div class="container">
-          <div class="section-heading section-heading--center">
-            <span class="section-heading__eyebrow">Paketit</span>
-            <h2>Selkeä hinnoittelu ilman turhaa monimutkaisuutta</h2>
-            <p>Tarjous voidaan räätälöidä tapauskohtaisesti, mutta nämä toimivat vahvana ja helposti ostettavana pohjana.</p>
+          <div class="section-heading reveal">
+            <span class="section-kicker">Prosessi</span>
+            <h2>Selkeä toteutus alusta loppuun.</h2>
+            <p>Pidän prosessin kevyenä ja suoraviivaisena, jotta projekti ei tunnu asiakkaasta raskaalta eikä veny turhaan.</p>
+          </div>
+
+          <div class="process-grid">
+            <div class="process-step reveal">
+              <span>1</span>
+              <h3>Yhteydenotto ja demo</h3>
+              <p>Teen lyhyen esimerkin siitä, miltä chat voisi näyttää juuri teidän sivuilla.</p>
+            </div>
+            <div class="process-step reveal">
+              <span>2</span>
+              <h3>Tarkennukset</h3>
+              <p>Sovitaan tärkeimmät tiedot: palvelut, hinnat, yhteystiedot, ohjaukset ja tavoitteet.</p>
+            </div>
+            <div class="process-step reveal">
+              <span>3</span>
+              <h3>Räätälöity toteutus</h3>
+              <p>Rakennan chatin yrityksen ilmeen ja tarpeiden mukaan valmiiksi käyttöön.</p>
+            </div>
+            <div class="process-step reveal">
+              <span>4</span>
+              <h3>Käyttöön ja kehitys</h3>
+              <p>Chat otetaan sivulle käyttöön ja sitä voidaan halutessa päivittää jatkossa ylläpidolla.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section pricing" id="paketit">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="section-kicker">Paketit</span>
+            <h2>Selkeä hinnoittelu ilman turhaa monimutkaisuutta.</h2>
+            <p>Useimmille yrityksille järkevin valinta on Pro, koska siinä chatista saadaan oikeasti kunnolla hyöty irti.</p>
           </div>
 
           <div class="pricing-grid">
-            <article class="pricing-card glass-card">
-              <div class="pricing-card__top">
-                <span class="pricing-card__label">Basic</span>
-                <h3>Perusversio</h3>
+            <article class="price-card reveal">
+              <div class="price-card__top">
+                <div>
+                  <h3>Basic</h3>
+                  <p class="price-card__mini">Kevyt aloituspaketti</p>
+                </div>
                 <div class="price">299 €</div>
-                <p>Yritykselle, joka haluaa siistin ja toimivan chatin nopeasti käyttöön.</p>
               </div>
-              <ul class="pricing-list">
-                <li>Brändätty chat yrityksen sivulle</li>
-                <li>10–15 yleisintä kysymystä</li>
-                <li>Perus CTA:t yhteydenottoon</li>
-                <li>Kevyt avainsanaohjaus</li>
-                <li>Asennusohje tai asennusapu</li>
+              <p class="price-card__desc">Siisti ja uskottava lähtöversio yritykselle, joka haluaa selkeän asiakasohjauksen sivulle.</p>
+              <ul>
+                <li>Räätälöity ulkoasu</li>
+                <li>10–15 kysymystä ja vastausta</li>
+                <li>Perus ohjaus yhteystietoihin / soittoon</li>
+                <li>Asennus sivulle tai selkeät asennusohjeet</li>
               </ul>
-              <a class="btn btn--secondary btn--full" href="#yhteys">Pyydä demo</a>
+              <a class="btn btn--ghost" href="#yhteys">Kysy tästä</a>
             </article>
 
-            <article class="pricing-card pricing-card--featured glass-card">
-              <div class="pricing-ribbon">Suosituin</div>
-              <div class="pricing-card__top">
-                <span class="pricing-card__label">Pro</span>
-                <h3>Laajempi versio</h3>
+            <article class="price-card price-card--featured reveal">
+              <div class="price-badge">Suosituin</div>
+              <div class="price-card__top price-card__top--featured">
+                <div>
+                  <h3>Pro</h3>
+                  <p class="price-card__mini">Täysi premium-ratkaisu</p>
+                </div>
                 <div class="price">449 €</div>
-                <p>Kun haluat oikeasti myyvän, näyttävän ja liidejä keräävän kokonaisuuden.</p>
               </div>
-              <ul class="pricing-list">
+              <p class="price-card__desc">Täysi ratkaisu yritykselle, joka haluaa sekä premium-ilmeen että oikeasti toimivan asiakasohjauksen.</p>
+              <ul>
                 <li>Kaikki Basic-paketista</li>
-                <li>20–30 Q&A + palvelukohtaiset flow’t</li>
-                <li>Liidien keräys chatin sisällä</li>
-                <li>WhatsApp-, puhelu- ja kartta-CTA:t</li>
+                <li>20–30 kysymystä ja vastausta</li>
+                <li>Palvelukohtaiset flow’t</li>
+                <li>Liidilomake / yhteydenottopyyntö</li>
+                <li>WhatsApp-, puhelu- tai ajanvarausohjaukset</li>
                 <li>1 muokkauskierros</li>
-                <li>Premium-tason UI-viimeistely</li>
               </ul>
-              <a class="btn btn--primary btn--full" href="#yhteys">Kysy Prosta</a>
+              <a class="btn btn--primary" href="#yhteys">Pyydä Pro-demo</a>
             </article>
 
-            <article class="pricing-card glass-card">
-              <div class="pricing-card__top">
-                <span class="pricing-card__label">Pro + ylläpito</span>
-                <h3>Jatkuva kehitys</h3>
-                <div class="price">449 € + 49 €/kk</div>
-                <p>Kun haluat pitää chatin ajan tasalla ja optimoida sitä jatkuvasti.</p>
+            <article class="price-card reveal">
+              <div class="price-card__top">
+                <div>
+                  <h3>Ylläpito</h3>
+                  <p class="price-card__mini">Jatkuva kehitys</p>
+                </div>
+                <div class="price">49 € / kk</div>
               </div>
-              <ul class="pricing-list">
-                <li>Kaikki Pro-paketista</li>
-                <li>Kuukausittaiset pienet muutokset</li>
+              <p class="price-card__desc">Yritykselle, joka haluaa pitää chatin ajan tasalla ja kehittää sitä käytön mukaan.</p>
+              <ul>
                 <li>Sisältöpäivitykset</li>
-                <li>Optimointi yleisimpien kysymysten mukaan</li>
-                <li>Prioriteettituki</li>
+                <li>Pienet muutokset ja viilaukset</li>
+                <li>Priorisoitu tuki</li>
+                <li>Jatkuva kehityspolku</li>
               </ul>
-              <a class="btn btn--secondary btn--full" href="#yhteys">Kysy ylläpidosta</a>
+              <a class="btn btn--ghost" href="#yhteys">Kysy ylläpidosta</a>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section section--alt" id="prosessi">
+      <section class="section authority">
+        <div class="container authority__grid">
+          <div class="authority__card reveal">
+            <span class="section-kicker">Miksi tämä näyttää uskottavalta</span>
+            <h2>“Tämä on oikea tekijä.”</h2>
+            <p>
+              Verkkosivun pitää näyttää siltä, että palvelu on oikea, huolellisesti rakennettu ja turvallinen ostaa.
+              Siksi sekä oma sivuni että asiakkaalle tehtävä chat on rakennettu tasolle, jossa ensivaikutelma toimii jo ennen ensimmäistäkään puhelua.
+            </p>
+          </div>
+
+          <div class="authority__points reveal">
+            <div>
+              <strong>Virallinen ja uskottava ilme</strong>
+              <p>Siisti rakenne, vahva visuaalinen identiteetti ja selkeä viestintä ilman harrastelijafiilistä.</p>
+            </div>
+            <div>
+              <strong>Selkeä arvolupaus</strong>
+              <p>Asiakas ymmärtää nopeasti mitä saa, miksi se hyödyttää ja miten projekti etenee.</p>
+            </div>
+            <div>
+              <strong>Räätälöity demo</strong>
+              <p>Pelkkien puheiden sijaan näytän konkreettisesti, miltä ratkaisu näyttää juuri heidän sivullaan.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq" id="faq">
         <div class="container">
-          <div class="section-heading">
-            <span class="section-heading__eyebrow">Yksinkertainen prosessi</span>
-            <h2>Näin homma etenee alusta valmiiksi</h2>
-            <p>Prosessi on suunniteltu niin, että asiakkaan on helppo sanoa kyllä.</p>
-          </div>
-
-          <div class="timeline-grid">
-            <article class="timeline-card glass-card">
-              <span class="timeline-card__step">01</span>
-              <h3>Tutustun sivuihisi</h3>
-              <p>Poimin tärkeimmät tiedot, palvelut ja yhteydenottoreitit, joista asiakkaasi kysyy eniten.</p>
-            </article>
-            <article class="timeline-card glass-card">
-              <span class="timeline-card__step">02</span>
-              <h3>Rakennan demoversion</h3>
-              <p>Näytän konkreettisesti, miltä chat näyttäisi juuri sinun verkkosivullasi.</p>
-            </article>
-            <article class="timeline-card glass-card">
-              <span class="timeline-card__step">03</span>
-              <h3>Viimeistellään sisältö</h3>
-              <p>Hiotaan vastaukset, flow’t, CTA:t ja yhteydenottolomake ostettavaksi kokonaisuudeksi.</p>
-            </article>
-            <article class="timeline-card glass-card">
-              <span class="timeline-card__step">04</span>
-              <h3>Käyttöön ja kasvamaan</h3>
-              <p>Toimitetaan valmis chat käyttöön. Halutessa mukana myös jatkuva ylläpito ja kehitys.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="ukk">
-        <div class="container faq-layout">
-          <div class="section-heading">
-            <span class="section-heading__eyebrow">UKK</span>
-            <h2>Yleisimmät kysymykset</h2>
-            <p>Nämä ovat juuri niitä asioita, joita potentiaalinen asiakas haluaa ymmärtää ennen kuin ottaa yhteyttä.</p>
+          <div class="section-heading reveal">
+            <span class="section-kicker">Usein kysyttyä</span>
+            <h2>Useimmat asiakkaat haluavat tietää nämä ennen päätöstä.</h2>
           </div>
 
           <div class="faq-list">
-            <details class="faq-item" open>
-              <summary>Miksi en käyttäisi vain tavallista yhteydenottolomaketta?</summary>
-              <p>Yhteydenottolomake on passiivinen. Hyvä chat taas auttaa heti, vastaa yleisimpiin kysymyksiin ja ohjaa asiakkaan oikeaan paikkaan ilman että hänen tarvitsee etsiä tietoa itse.</p>
+            <details class="faq-item reveal">
+              <summary>Onko tämä oikea AI-chatbot?</summary>
+              <p>Tavoite ei ole rakentaa bottia, joka arvailee. Rakennan ohjatun, fiksun ja turvallisen asiakaschatin, joka vastaa oikeisiin asioihin ja ohjaa asiakkaan eteenpäin ilman sekoilua.</p>
             </details>
-            <details class="faq-item">
-              <summary>Onko tämä tekoälybotti vai klikkipohjainen ratkaisu?</summary>
-              <p>Perusidea on hallittu ja turvallinen flow. Tämä on juuri vahvuus: asiakas saa oikeat tiedot nopeasti eikä botti ala arvailemaan omiaan.</p>
+            <details class="faq-item reveal">
+              <summary>Vaatiiko tämä koko verkkosivun uusimista?</summary>
+              <p>Ei. Ratkaisu on suunniteltu nimenomaan niin, että se voidaan lisätä nykyiselle sivulle ilman isoa verkkosivuprojektia.</p>
             </details>
-            <details class="faq-item">
-              <summary>Sopiiko tämä minun toimialalleni?</summary>
-              <p>Kyllä, erityisesti jos sivuillasi kysytään paljon samoja asioita: hinnat, aukioloajat, palvelut, sijainti, yhteydenotto ja tarjouspyynnöt.</p>
+            <details class="faq-item reveal">
+              <summary>Miten projekti käytännössä etenee?</summary>
+              <p>Teen ensin demon, sitten tarkennetaan tärkeät tiedot, rakennan valmiin version ja lopuksi chat voidaan ottaa käyttöön sivulla.</p>
             </details>
-            <details class="faq-item">
-              <summary>Tarvitseeko minun itse säätää teknisiä asioita?</summary>
-              <p>Ei. Tavoite on, että saat valmiin ratkaisun käyttöön mahdollisimman vähällä vaivalla.</p>
-            </details>
-            <details class="faq-item">
-              <summary>Voinko saada ensin demon?</summary>
-              <p>Kyllä. Demo on erittäin hyvä tapa nähdä konkreettisesti, miltä tämä näyttäisi juuri sinun yrityksellesi ennen lopullista päätöstä.</p>
+            <details class="faq-item reveal">
+              <summary>Mitä jos haluan myöhemmin muutoksia?</summary>
+              <p>Chatia voidaan päivittää myöhemmin joko yksittäisinä muutoksina tai jatkuvan ylläpidon kautta.</p>
             </details>
           </div>
         </div>
       </section>
 
-      <section class="section cta-section" id="yhteys">
-        <div class="container">
-          <div class="cta-panel glass-card">
-            <div class="cta-panel__copy">
-              <span class="section-heading__eyebrow">Seuraava askel</span>
-              <h2>Pyydä oma demo yrityksellesi</h2>
-              <p>
-                Lähetä viesti, niin katsotaan miltä Jerry Chatpalvelun rakentama
-                asiakaspalveluchat näyttäisi juuri sinun verkkosivuillasi.
-              </p>
-              <div class="cta-contact-list">
-                <a href="mailto:hello@jerrychatpalvelu.fi">hello@jerrychatpalvelu.fi</a>
-                <a href="tel:+358401234567">+358 40 123 4567</a>
-              </div>
-            </div>
-
-            <form class="contact-form" action="#" method="post">
-              <div class="form-row">
-                <label>
-                  Nimi
-                  <input type="text" name="name" placeholder="Yrityksen / yhteyshenkilön nimi" />
-                </label>
-                <label>
-                  Sähköposti
-                  <input type="email" name="email" placeholder="nimi@yritys.fi" />
-                </label>
-              </div>
-              <label>
-                Yrityksen verkkosivu
-                <input type="text" name="website" placeholder="https://yritys.fi" />
-              </label>
-              <label>
-                Viesti
-                <textarea name="message" rows="5" placeholder="Kerro lyhyesti yrityksestäsi tai pyydä suoraan demoa."></textarea>
-              </label>
-              <button class="btn btn--primary btn--full" type="submit">Pyydä demo</button>
-              <p class="form-note">Demo-sivulla lomake ei lähetä tietoja minnekään. Tässä kohtaa voidaan myöhemmin kytkeä oikea sähköposti, Formspark tai muu lomakepalvelu.</p>
-            </form>
+      <section class="section cta-band">
+        <div class="container cta-band__inner reveal">
+          <div>
+            <span class="section-kicker section-kicker--light">Seuraava askel</span>
+            <h2>Haluatko nähdä miltä tämä näyttäisi juuri teidän sivulla?</h2>
+            <p>Pyydä demo, niin näytän konkreettisesti miten chat voisi ohjata teidän asiakkaat oikeaan paikkaan.</p>
           </div>
+          <a class="btn btn--light" href="#yhteys">Pyydä oma demo</a>
+        </div>
+      </section>
+
+      <section class="section contact" id="yhteys">
+        <div class="container contact__grid">
+          <div class="contact__copy reveal">
+            <span class="section-kicker">Yhteys</span>
+            <h2>Pyydä oma demo tai kysy lisää.</h2>
+            <p>
+              Jos haluat nähdä miltä räätälöity chat voisi näyttää juuri teidän yrityksen sivuilla,
+              laita viestiä tai soita. Vastaan mielelläni ja voin näyttää lyhyen esimerkin käytännössä.
+            </p>
+
+            <div class="contact-cards">
+              <a class="contact-card reveal" href="mailto:jerry.chatpalvelu@gmail.com">
+                <strong>Sähköposti</strong>
+                <span>jerry.chatpalvelu@gmail.com</span>
+              </a>
+              <a class="contact-card reveal" href="tel:0449740827">
+                <strong>Puhelin</strong>
+                <span>044 974 0827</span>
+              </a>
+            </div>
+          </div>
+
+          <form class="contact-form reveal" id="contactForm">
+            <div class="form-row">
+              <label for="name">Nimi</label>
+              <input id="name" name="name" type="text" placeholder="Yrityksen nimi / yhteyshenkilö" required />
+            </div>
+            <div class="form-row">
+              <label for="email">Sähköposti</label>
+              <input id="email" name="email" type="email" placeholder="esim. yritys@firma.fi" required />
+            </div>
+            <div class="form-row">
+              <label for="phone">Puhelin</label>
+              <input id="phone" name="phone" type="text" placeholder="Puhelinnumero" />
+            </div>
+            <div class="form-row">
+              <label for="message">Viesti</label>
+              <textarea id="message" name="message" placeholder="Kerro lyhyesti millaiselle yritykselle haluaisit chatin tai pyydä suoraan demo." required></textarea>
+            </div>
+            <button class="btn btn--primary btn--full" type="submit">Lähetä yhteydenotto</button>
+            <p class="form-note">Lomake avaa valmiin sähköpostiluonnoksen sähköpostiohjelmaasi.</p>
+          </form>
         </div>
       </section>
     </main>
@@ -398,17 +470,18 @@
     <footer class="footer">
       <div class="container footer__inner">
         <div class="footer__brand">
-          <img src="logo.png" alt="Jerry Chatpalvelu logo" class="footer__logo" />
+          <img src="logo.png" alt="Jerry Chatpalvelu logo" />
           <div>
             <strong>Jerry Chatpalvelu</strong>
-            <p>Räätälöidyt asiakaspalveluchatit yrityksille, jotka haluavat näyttää ammattimaisilta ja saada enemmän yhteydenottoja verkkosivuiltaan.</p>
+            <span>Räätälöidyt asiakaschatit yrityksille</span>
           </div>
         </div>
-        <div class="footer__meta">© 2026 Jerry Chatpalvelu. Demo-sivupohja jatkokehitykseen.</div>
+        <div class="footer__links">
+          <a href="mailto:jerry.chatpalvelu@gmail.com">jerry.chatpalvelu@gmail.com</a>
+          <a href="tel:0449740827">044 974 0827</a>
+        </div>
       </div>
     </footer>
-
-    <a class="floating-cta" href="#yhteys">Pyydä demo</a>
   </div>
 
   <script src="script.js"></script>
